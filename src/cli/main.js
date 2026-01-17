@@ -23,15 +23,15 @@ export async function main() {
                 let fromCurrency = await handleConvertFrom();
                 let toCurrency = await handleConvertTo();
                 let amount = await handleAmount();
-                let result = await calculateConversion(fromCurrency, toCurrency, amount);
-                showSuccessMessage(`${amount} ${fromCurrency} equals ${result} ${toCurrency}`);
+                let result = calculateConversion(fromCurrency, toCurrency, amount);
+                showSuccessMessage(`${amount} ${fromCurrency} equals ${result} ${toCurrency}\n`);
                 break;
             case "exit":
-                showSuccessMessage("Goodbye!");
+                showSuccessMessage("Goodbye!\n");
                 running = false;
                 break;
             default:
-                showErrorMessage("Unknown action");
+                showErrorMessage("Unknown action\n");
         }
     }
 }
@@ -71,7 +71,7 @@ export async function handleAmount() {
     return amount;
 }
 
-export async function calculateConversion(fromCurrency, toCurrency, amount) {
+export function calculateConversion(fromCurrency, toCurrency, amount) {
     let fromRate = currencies.get(fromCurrency);
     let toRate = currencies.get(toCurrency);
     return ((amount / fromRate) * toRate).toFixed(4);
