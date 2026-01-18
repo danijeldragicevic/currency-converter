@@ -37,10 +37,6 @@ export async function main() {
 }
 
 // Helpers
-export function isKnownCurrency(currency) {
-    return currencies.has(currency);
-}
-
 export async function handleConvertFrom() {
     showSuccessMessage('What do you want to convert?');
     let { fromCurrency } = await inquirer.prompt(convertFromPrompt);
@@ -64,6 +60,10 @@ export async function handleConvertTo() {
     } else {
         return sanitizedToCurrency;
     }
+}
+
+export function isKnownCurrency(currency) {
+    return currencies.has(currency);
 }
 
 export async function handleAmount() {
