@@ -17,8 +17,9 @@ A command-line interface application for converting between different currencies
 - npm (comes with Node.js)
 
 ### Installation
-1. Clone the repository or navigate to the project directory:
+1. Clone the repository and navigate to the project directory:
    ```bash
+   git clone https://github.com/danijeldragicevic/currency-converter.git
    cd currency-converter
    ```
 
