@@ -77,6 +77,20 @@ Exit the application.
 Goodbye!
 ```
 
+#### 3. Input Validation
+The application validates currency codes and ensures the amount is a positive number.
+```bash
+? From: ABC
+Unknown currency
+What do you want to convert?
+? From: USD
+? To: EUR
+? Amount: -50
+Amount must be a positive number.
+? Amount: 100
+100 USD equals 89.0000 EUR
+```
+
 ## Technologies
 - **Node.js**: JavaScript runtime environment (ES modules)
 - **Inquirer.js** (^13.1.0): Interactive command-line prompts
