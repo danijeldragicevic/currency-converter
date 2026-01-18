@@ -1,5 +1,7 @@
 # 💱 Currency Converter CLI
 
+[![Run Tests](https://github.com/danijeldragicevic/coffee-machine/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/danijeldragicevic/coffee-machine/actions/workflows/test.yml)
+
 A command-line interface application for converting between different currencies, built with Node.js.
 
 ## Features
