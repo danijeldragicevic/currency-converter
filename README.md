@@ -13,7 +13,7 @@ A command-line interface application for converting between different currencies
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v18 or higher recommended)
+- Node.js (v20 or higher recommended)
 - npm (comes with Node.js)
 
 ### Installation
