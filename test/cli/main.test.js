@@ -6,18 +6,16 @@ import { currencies } from "../../src/data/currencies.js";
 inquirer.prompt = jest.fn();
 
 // Create mock functions for console UI
+const mockShowWelcomeMessage = jest.fn();
 const mockShowSuccessMessage = jest.fn();
 const mockShowErrorMessage = jest.fn();
-const mockShowWelcomeMessage = jest.fn();
 
-// Mock the console.js module before importing main.js
 jest.unstable_mockModule('../../src/ui/console.js', () => ({
-    showSuccessMessage: mockShowSuccessMessage,
-    showErrorMessage: mockShowErrorMessage,
     showWelcomeMessage: mockShowWelcomeMessage,
+    showSuccessMessage: mockShowSuccessMessage,
+    showErrorMessage: mockShowErrorMessage
 }));
 
-// Now import main.js (which will use the mocked console functions)
 const { main, isKnownCurrency, handleConvertFrom, handleConvertTo, handleAmount, calculateConversion } = await import("../../src/cli/main.js");
 
 // Tests
